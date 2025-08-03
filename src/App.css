@@ -1,38 +1,136 @@
-.App {
+/* Styles de base */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.navbar {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Formulaire */
+.form-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-group textarea.code-input {
+  font-family: monospace;
+  min-height: 150px;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Liste des codes */
+.code-list {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.filter-controls {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 20px;
+}
+
+.filter-controls select {
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* Élément de code */
+.code-item {
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  margin-bottom: 15px;
+}
+
+.code-item:last-child {
+  border-bottom: none;
+}
+
+.code-item h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.code-item pre {
+  background: #f8f8f8;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.category {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.category.php {
+  background-color: #8892bf;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.category.html {
+  background-color: #e34c26;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.category.css {
+  background-color: #2965f1;
+  color: white;
 }
